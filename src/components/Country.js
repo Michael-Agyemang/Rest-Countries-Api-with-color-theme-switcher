@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import "../country.css"
-import { apiURL  } from "./Api"
+import { apiURL } from "./Api"
 
  const Country = () => {
   const [country, setCountry] = useState([])
