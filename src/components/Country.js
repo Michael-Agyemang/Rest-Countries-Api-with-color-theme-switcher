@@ -29,7 +29,7 @@ import { apiURL } from "./Api"
     if (countries.length > 0) {
       filterCountryByName(name);
     }
-  }, [countries, name]);
+  },);
 
   const filterCountryByName = (countryName) => {
     const filteredCountry = countries.filter(
