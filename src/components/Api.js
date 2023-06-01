@@ -1,2 +1,2 @@
 
-export let apiURL = 'https://restcountries.com/v2';
+export apiURL = 'https://restcountries.com/v2';
