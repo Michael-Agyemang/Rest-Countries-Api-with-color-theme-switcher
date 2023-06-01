@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { api } from "./Api"
+import { apiURL } from "./Api"
 import Filter from "./Filter"
 import FilterRegions from "./FilterRegions";
 
@@ -12,15 +12,14 @@ const Countries = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   const fetchCountries = async () => {
-    const countries = await api.getCountries()
-    //const countries = await response.json()
-    setCountries(countries)
+   const res = await fetch(`${apiURL}/all`);
+    const data = await res.json();
+    setCountries(data)
     setIsLoading(false)
   }
 
 
   useEffect(() => {
-    
     fetchCountries()
   }, [])
 
@@ -106,3 +105,4 @@ const Countries = () => {
 }
 
 export default Countries
+
