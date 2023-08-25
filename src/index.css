@@ -28,9 +28,7 @@ ul {
 a {
   text-decoration: none;
 }
-.dark-mode{
-  margin-left: 5px;
-}
+
 .toggle-component{
   display: flex;
   display: inline-block;
@@ -112,6 +110,7 @@ body {
 /* Header component */
 .header {
   display: flex;
+  height: 80px;
   padding: 1.5rem, 5.2rem, 0.2rem,5.5rem;
   flex-direction: row;
   align-items: center; 
@@ -149,22 +148,22 @@ body {
 
 .select-region {
   position: relative;
-  left: 1110px;
-  bottom: 96px;
+  display: flex;
+  margin-left: -15px;
+  margin-top: -29px;
   width: 11.5rem;
   height:50px;
   /* padding: 0 0.2rem; */
   -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   background-color: var(--article-color);
-  /* padding: 12px; */
-  height: 50px;
   font-family: inherit;
   border: none;
   border-radius: 5px;
   color: var(--text-color);
   outline: none;
 }
+
 .light .select-region{
   background-color: var( --light-mode);
   color:var(--light-mode-text);
@@ -173,6 +172,7 @@ details > summary {
   list-style: none;
 }
 details > summary::-webkit-details-marker {
+  content: "";
   display: none;
 }
 
@@ -181,6 +181,7 @@ details > summary::-webkit-details-marker {
   cursor: pointer;
   border-radius: 5px;
   list-style: none;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   gap: 2.8rem;
@@ -188,9 +189,8 @@ details > summary::-webkit-details-marker {
   font-size: 0.9rem;
   font-weight: 400;
   justify-content: space-between;
-  
-  
 }
+
 
 .select-region summary:after {
   content: "";
@@ -357,7 +357,7 @@ h4 span{
 }
 
 /* Media queries */
-@media (min-width: 640px) {
+@media (min-width: 501px) {
   .countries {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -370,30 +370,75 @@ h4 span{
   
 }
 
-@media (min-width: 992px) {
+@media (min-width: 640px) {
   .countries {
     grid-template-columns: repeat(3, 1fr);
   }
+  .select-region{
+    position: absolute;
+    left: 83%;
+    top: 20%;
+  }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .countries {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+  .countries .details {
+    margin: -10px 0 0;
+  }
+  .select-region{
+    position: absolute;
+    left: 70%;
+    top: 12%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .countries .details {
+    margin: -10px 0 0;
+  }
+  .select-region{
+    position: absolute;
+    left: 83%;
+    top: 20%;
+  }
+}
+
+@media  (min-width: 1280px) {
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .countries .details {
+    margin: -10px 0 0;
+  }
+  .select-region{
+    position: absolute;
+    left: 83%;
+    top: 20%;
   }
 }
 
 @media (max-width: 500px) {
+
   .header h1 {
     font-size: 15px;
     padding: 10px 0;
   }
+
   .toggle{
     margin-bottom: 10px;
   }
-  .country-name{
-  
+
+  .country-name {
     padding-top: 20px;
-   
   }
 
   .form input {
@@ -405,6 +450,7 @@ h4 span{
     position: relative;
     width: 50vw;
     left: 50px;
-   margin-top: 80px;
+    margin-top: 80px;
   }
+  
 }
