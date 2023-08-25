@@ -70,7 +70,6 @@
   position: relative;
   margin-top: 80px;
   left: 40px;
-  
 }
   
   .country article .country-details div h5 span {
@@ -84,14 +83,16 @@
   .country article .borders {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 720px;
+    margin-left: 780px;
     margin-top: -35px;
     
   }
 
   .border-around h3{
-    margin-left: 570px;
+    position: relative;
+    left: 570px;
     margin-top: -100px;
+    
   }
   
   .country article .borders ul {
@@ -118,12 +119,54 @@
     .country {
       padding: 50px;
       justify-content: flex-end;
+    
+    }
+    .header{
+     display: flex;
+     
       
     }
+    
+    .header h1{
+     display: flex;
+     position: relative;
+      right: 25px;
+      top: 10px;
+    }
+    .toggle{
+      position: relative;
+      top: 10px;
+      left: 30px;
+    }
+    .form{
+      margin-left: -25px;
+      
+    }
+
+    .form input{
+      width: 340px;
+      
+    }
+
+    .select-region{
+      margin-top: -29px;
+      margin-left: -25px;
+      bottom: 20px;
+    }
+    
     article .country-inner .flag img{
+      display: flex;
       height: 300px;
+      max-width:340px;
       border-radius: 10px;
     }
+
+     .other-details h5{
+      position: relative;
+      left: -110px;
+       
+      }
+
     .country article .borders {
       display: flex;
       flex-wrap: wrap;
@@ -134,15 +177,18 @@
     
     .country article .country-details div {
       position: relative;
-      right: 45px;
+      left: -70px;
      
     }
   
     .border-around h3{
-      margin-left: 50px;
+      margin-left: -590px;
       margin-top: 70px;
-      position: relative;
-      right: 45px;
+      /* position: relative;
+      right: 45px; */
+    }
+    .borders{
+    width: 350px
     }
     
     .country article .borders ul {
@@ -152,25 +198,35 @@
       border-radius: 3px;
       box-shadow: 0 5px 5px hsla(200, 15%, 8%, 0.5);
       position: relative;
-      right: 45px;
+      left: -70px;
       
     }
+   
     
   }
   
   
   @media (min-width: 992px) {
+       
     .country article .country-inner {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
-    }
+    } 
   
     .country .country-details {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
+    .border-around h3{
+      margin-left: 50px;
+  
+      position: relative;
+      right: 45px;
+    }
+
+
   }
   
   @media (min-width: 1200px) {
