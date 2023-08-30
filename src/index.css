@@ -195,6 +195,7 @@ details > summary::-webkit-details-marker {
 .select-region summary:after {
   content: "";
   display: inline-block;
+  position: static;
   width: 0.4rem;
   height: 0.4rem;
   border-bottom: 1px solid currentColor;
@@ -325,6 +326,7 @@ details > summary::-webkit-details-marker {
   border-radius: 5px 5px 0 0;
   width: 400px;
   height: 250px;
+  object-fit: cover;
 }
 
 .countries .details {
@@ -409,6 +411,10 @@ h4 span{
     left: 83%;
     top: 20%;
   }
+
+  .countries .flag img {
+    object-fit: cover;
+  }
 }
 
 @media  (min-width: 1280px) {
@@ -423,6 +429,9 @@ h4 span{
     position: absolute;
     left: 83%;
     top: 20%;
+  }
+  .countries .flag img {
+    object-fit: cover;
   }
 }
 
